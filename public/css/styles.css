@@ -1,11 +1,12 @@
 body{
     text-align: center;
+    background-color: #053f5e
 }
 
 .box {
     max-width: 400px;
     margin: 10px auto;
-    background: white;
+    background: #ffd700;
     border-radius: 5px;
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
@@ -19,4 +20,13 @@ body{
   
 .item p{
     margin: auto 10px ;
+}
+
+.fa-trash-alt{
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 8px;
+    background-color:#022c43;
+    color: white;
+
 }

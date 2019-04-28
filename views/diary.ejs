@@ -16,21 +16,41 @@
 <body>
     <div class="box">
         <h3>Breakfast</h3>
-        <% breakfasts.forEach(function(bf){ %>
+        <% Meals.forEach(function(bf){ %>
+            <% if(bf.meal==="Breakfast"){ %>      
         <form action="/delete" method="POST">
             <div class="item">
                 <button class="btn fas fa-trash-alt" name= "itemId" value="<%= bf._id %>"onChange="this.form.submit()"></button>
                 <p><%= bf.content %></p>
             </div>
         </form>
-
-        <% }) %>
-
+        <% }}) %>
         <form class="item" action="/" method="POST">
             <input name="mealContent" type="text" class="form-control">
             <button name="meal" type="submit" name="" value="Breakfast">+</button>
         </form>
     </div>
+
+
+    <div class="box">
+        <h3>Lunch</h3>
+        <% Meals.forEach(function(lh){ %>
+           <% if(lh.meal==="Lunch"){ %>      
+        <form action="/delete" method="POST">
+            <div class="item">
+                <button class="btn fas fa-trash-alt" name= "itemId" value="<%= lh._id %>"onChange="this.form.submit()"></button>
+                <p><%= lh.content %></p>
+            </div>
+        </form>
+
+        <% }}) %>
+
+        <form class="item" action="/" method="POST">
+            <input name="mealContent" type="text" class="form-control">
+            <button name="meal" type="submit" name="" value="Lunch">+</button>
+        </form>
+    </div>
+
 
 
 
